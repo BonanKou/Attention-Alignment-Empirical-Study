@@ -85,7 +85,7 @@ Secondly, after averaging all five models (except for GPT-4), BERT_masking produ
 
 #### To reproduce content of this table
 
-## Case Study
+## Manual Analysis
 
 ## User Study
 
