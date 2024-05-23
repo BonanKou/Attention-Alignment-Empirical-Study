@@ -4,7 +4,7 @@ Large Language Models (LLMs) have recently been widely used for code generation.
 
 [^fn1]: https://arxiv.org/abs/2306.01220
 
-  <img src="[https://github.com/BonanKou/Empirical_Study_On_Attention_Alignment_CodeLLMs/blob/main/image/example_misalignment-1.png](https://github.com/BonanKou/Attention-Alignment-Empirical-Study/blob/main/pics/Image_20240523091222.png)" alt="drawing" width="400"/>
+  <img src="https://github.com/BonanKou/Attention-Alignment-Empirical-Study/blob/main/pics/Image_20240523091222.png" alt="drawing" width="400"/>
   
 ## Data
 The labeled HumanEval and MBPP datasets are available in dataset folder. For details of the `dataset`, please check our paper.
