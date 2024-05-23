@@ -2,9 +2,7 @@
 # Do Large Language Models Pay Similar Attention Like Human Programmers When Generating Code?
 Large Language Models (LLMs) have recently been widely used for code generation. Due to the complexity and opacity of LLMs, little is known about how these models generate code. We made the first attempt to bridge this knowledge gap by investigating whether LLMs attend to the same parts of a task description as human programmers during code generation. An analysis of six LLMs, including GPT-4, on two popular code generation benchmarks revealed a consistent misalignment between LLMs' and programmers' attention. We manually analyzed 211 incorrect code snippets and found five attention patterns that can be used to explain many code generation errors. Finally, a user study showed that model attention computed by a perturbation-based method is often favored by human programmers. Our findings highlight the need for human-aligned LLMs for better interpretability and programmer trust. Data and codes to replicate our work are included in this repository.
 
-[^fn1]: Mark Chen et al. 2021. Evaluating Large Language Models Trained on Code.
-(2021).
-[^fn2]: Jacob Austin, Augustus Odena, et al. 2021. Program Synthesis with Large Language Models.
+[^fn1]: https://arxiv.org/abs/2306.01220
 
   <img src="https://github.com/BonanKou/Empirical_Study_On_Attention_Alignment_CodeLLMs/blob/main/image/example_misalignment-1.png" alt="drawing" width="400"/>
   
@@ -12,10 +10,10 @@ Large Language Models (LLMs) have recently been widely used for code generation.
 The most critical artifact in this repository is our human-annotated dataset with programmer attention. Since this study's rigor relies mainly on the quality of the human annotation, we will briefly explain how the dataset is constructed in this section. For more details, please refer to our paper.
 
 ### Definition of Human Attention
-When solving a programming task by reading a prompt in natural language, programmers will not pay equal attention to every word in the prompt. In fact, some words (i.e., keywords) are more informative than others and require more attention (e.g., "return"). The goal of the labelers who constructed this dataset is to select such keywords. 
+When solving a programming task by reading a natural language prompt, programmers do not pay equal attention to every word in the prompt. Some words (i.e., keywords) are more informative than others and require more attention (e.g., "return"). The labelers who constructed this dataset aim to select such keywords. 
 
 ### Data Format
-A pickled version of our dataset is provided in the `dataset` folder. To unpickle the file, import the `pickle` library and run the following:
+A pickled version of our dataset is provided. To unpickle the file, import the `pickle` library and run the following:
 
 `pickle.load("dataset.txt", "rb")`
 
@@ -28,7 +26,7 @@ Our dataset contains code generation prompts for 1,111 Python tasks from HumanEv
 
 -   Red: ***operator*** keywords that suggest important properties of the manipulated data and operations, including quantifiers (e.g., “all”, “one”), adjectives (e.g., “first”, “closer”), and adverbs (e.g., “every”, “none”).
 
-The `highlight` field in each item of the dictionary contains a list of dictionaries, where each dictionary represents a highlighted keyword. Each dictionary contains two fields: place, which represents the character indices of the keyword in the prompt, and color, which represents the color code for the keyword.
+The `highlight` field in each dictionary item contains a list of dictionaries, each representing a highlighted keyword. Each dictionary contains two fields: place, which represents the character indices of the keyword in the prompt, and color, which represents the color code for the keyword.
 
 ### Labeling Procedure
 The first two authors, with over five years of programming experience in Python, manually labeled the words and phrases they considered essential to solving a programming task in the task description.
