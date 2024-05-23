@@ -10,7 +10,6 @@ The labeled HumanEval and MBPP datasets are available in dataset folder. For det
 ## Experiment Setup
 Our study includes 12 attention calculation methods from four categories: six self-attention-based, four gradient-based, and two perturbation-based methods. This repository contains attention calculated by all 12 methods on six models as pickled files in the `experiment_result` folder. Readers can also run the experiment from scratch with notebooks in `perturbation_based`, `gradient_based`, `self_attention_based` folders.
 
-#### Prerequisites
 To run the gradient-based methods, you must install the `ecco` library, which requires a Python version of 3.8.19.
 
 ## Experiment Results
