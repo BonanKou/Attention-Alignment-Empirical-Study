@@ -26,10 +26,5 @@ The explainable errors can be accessed at:
 
 `other_data/explainable_errors.txt`
 
-## User Study
-To understand which explanation method programmers prefer, we conducted a user study with 22 students (18 males and 4 females) from the CS department of an R1 university. The participants' responses can be accessed at:
-
-`other_data/attention_alignment.csv`
-
 
 
