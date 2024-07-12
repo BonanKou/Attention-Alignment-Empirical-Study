@@ -26,5 +26,16 @@ The explainable errors can be accessed at:
 
 `other_data/explainable_errors.txt`
 
+## Manual Analysis
+[Paper Link](https://arxiv.org/pdf/2306.01220)
+
+If you want to cite this work, please use the following bibtex.
+
+`@article{kou2023large,
+  title={Do Large Language Models Pay Similar Attention Like Human Programmers When Generating Code?},
+  author={Kou, Bonan and Chen, Shengmai and Wang, Zhijie and Ma, Lei and Zhang, Tianyi},
+  journal={arXiv preprint arXiv:2306.01220},
+  year={2023}
+}`
 
 
